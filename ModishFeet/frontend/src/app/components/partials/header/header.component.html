@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">ModishFeet!</a>
+
+        <nav>
+            <ul>
+                <span *ngIf="userObj==null" class="login-signup">
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/signUp">signUp</a></li>
+                </span>
+                
+                <li class="menu-container" *ngIf="userMsg == msg "><a routerLink="/dashboard">{{userObj.name}}</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profile</a>
+                        <a routerLink="/order">Order</a>
+                        <a (click)="logout()">logout</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="cart">Cart<span>3</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

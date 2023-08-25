@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <img [src]="shoe.image" alt="shoe.name">
+    <div class="detail">
+        <div class="header">
+            <span class="name">
+                {{shoe.name}}
+
+            </span>
+            <span class="favorite {{shoe.favorite}}? '':'not'"> ❤</span>
+        </div>
+        <div class="rating">
+            <bar-rating [(rate)]="shoe.stars" [max]="5">
+            </bar-rating>
+        </div>
+        <div class="origins">
+            <span *ngFor="let origin of shoe.Size">{{origin}}</span>
+        </div>
+        <div class="tags">
+            <a routerLink="/tag/{{shoe.categoryName}}">
+                {{shoe.categoryName}}
+            </a>
+        </div>
+        <div class="cooktime">
+            {{shoe.description}}
+        </div>
+        <div class="price">
+            <span>
+                <span style="font-weight:bold;">{{shoe.Price | currency:"&#8377;"}}</span> 
+            </span>
+        </div>
+        <button>
+            add to cart
+        </button>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+*{
+  box-sizing:border-box;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 0.5rem;
+}
+
+.container
+{
+  border: 1px solid #e72929;
+  width: 20rem;
+  padding : 10px;
+  display: flex;
+  margin: 300px 600px;
+  height: 20rem;
+}
+
+.username
+{
+  color: #e72929;
+}
+.username input 
+{
+  border: 1px solid #e72929;
+  color: #e72929;
+}
+form
+{
+  margin-top:auto;
+}
+.password
+{
+  color: #e72929;
+}
+
+.password input 
+{
+  border: 1px solid #e72929;
+  color: #e72929;
+}
+
+.container button
+{
+  background-color: #f0f0f0;
+    padding: 0.3rem 1rem;
+    margin: 0.4rem 3.0rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    color: #e72929;
+}
+.container button:hover
+{
+  background-color: #e72929;
+  color:white
+}
+.title
+{
+  color: #e72929;
+
+}

@@ -1,0 +1,47 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-tags></app-tags>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<ul>
+    <li *ngFor="let shoe of shoes">
+            <a routerLink="/shoe/{{shoe.id}}">
+            <img [src]="shoe.image" [alt]="shoe.name" />
+
+            <div class="content">
+                <div class="name">
+                    {{shoe.name}}
+                </div>
+                <span class="favorite {{shoe.favorite?'':'not'}}">
+                    <span class="favorite {{shoe.favorite?'':'not'}}">
+                        ❤
+                    </span>
+                </span>
+                <div>
+                    <bar-rating [(rate)]="shoe.stars" [max]="5">
+                    </bar-rating>
+                </div>
+            
+            <div class="product-item-footer">
+                <div class="origins">
+                    <span *ngFor="let origin of shoe.Size">
+                        {{origin}}
+                    </span>
+                </div>
+
+
+
+                {{shoe.categoryName}}
+
+                <div class="price">
+                    <span>
+                        <span style="font-weight:bold;">{{shoe.Price | currency:"&#8377;"}}</span> 
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        </a>
+    </li>
+
+</ul>
